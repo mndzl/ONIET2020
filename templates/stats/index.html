@@ -11,10 +11,10 @@
     <div class="nav-container">
         <nav>
             <div class="user-name">
-                Rodrigo Maidana
+                {{user.get_full_name}}
             </div>
             <div class="logout">
-                Salir
+                <a href='{% url "logout" %}'>Salir</a>
             </div>
         </nav>
     </div>
@@ -23,7 +23,7 @@
         <div class="stats">
             <div class="country">
                 <div class="country_container">
-                    <h1>{{pais}}</h1>
+                    <h1>{{user.pais}}</h1>
                 </div>
             </div>
 

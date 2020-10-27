@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="col-md-8 col-md-offset-2">
+        <form method="post" id="form_login">
+            {% csrf_token %}
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
+                <div class="panel-body">
+                    {% if error_message %}
+                        <p class="bg-danger p-d ml-b">{{ error_message }}</p>
+                    {% endif %}
+                   
+                    <div class="form-group clearfix">
+                        <label for="{{ form.username.id_for_label }}" class="col-md-4 control-label text-right">Username<span class="text-red">*</span>:</label>
+                        <div class="col-md-6">
+                            {{ form.username }}
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <label for="{{ form.password.id_for_label }}" class="col-md-4 control-label text-right">Password<span class="text-red">*</span>:</label>
+                        <div class="col-md-6">
+                            {{ form.password }}
+                        </div>
+                    </div>
+                </div>
+            <button type="submit">Login</button>
+            <small><a href="{% url 'register' %}">Registrarme</a></small>
+        </form>
+    </div>
+</body>
+</html>
