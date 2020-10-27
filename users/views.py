@@ -1,8 +1,9 @@
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from .forms import RegisterForm
 from django.contrib.auth import login
+from users.models import custom_user
 
 def user_register(request):
     template = 'users/register.html'
@@ -35,8 +36,11 @@ def user_register(request):
                 user.last_name = form.cleaned_data['last_name']
                 user.phone_number = form.cleaned_data['phone_number']
                 user.save()
-            
+
+                custom_user.objects.create(user=user, pais='Argentina')
+
                 login(request, user)
+                
                
     else:
         form = RegisterForm()
