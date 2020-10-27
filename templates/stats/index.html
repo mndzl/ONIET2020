@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="user-name">
+                Rodrigo Maidana
+            </div>
+            <div class="logout">
+                Salir
+            </div>
+        </nav>
+    </div>
+
+    <div class="body-container">
+        <div class="stats">
+            <div class="country">
+                <div class="country_container">
+                    <select name="country_option" id="country">
+                        <option value="1">Argentina</option>
+                        <option value="2">Colombia</option>
+                        <option value="3">Chile</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stats-total">
+                    <div class="casos">Casos</div>
+                    <div class="amount">1000</div>
+                </div>
+                <div class="stats-percentage">
+                    <div class="recuperados">
+                        <div class="casos">Recuperados</div>
+                        <div class="amount">200</div>                
+                    </div>
+                    <div class="fallecidos">
+                        <div class="casos">Fallecidos</div>
+                        <div class="amount">50</div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="actualizacion">
+            Ult. Actualizacion: Hoy
+        </div>
+    </footer>
+</body>
+</html>
