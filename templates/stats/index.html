@@ -23,27 +23,23 @@
         <div class="stats">
             <div class="country">
                 <div class="country_container">
-                    <select name="country_option" id="country">
-                        <option value="1">Argentina</option>
-                        <option value="2">Colombia</option>
-                        <option value="3">Chile</option>
-                    </select>
+                    <h1>{{pais}}</h1>
                 </div>
             </div>
 
             <div class="stats-container">
                 <div class="stats-total">
                     <div class="casos">Casos</div>
-                    <div class="amount">1000</div>
+                    <div class="amount">{{total}}</div>
                 </div>
                 <div class="stats-percentage">
                     <div class="recuperados">
                         <div class="casos">Recuperados</div>
-                        <div class="amount">200</div>                
+                        <div class="amount">{{recuperados}}</div>                
                     </div>
                     <div class="fallecidos">
                         <div class="casos">Fallecidos</div>
-                        <div class="amount">50</div>                
+                        <div class="amount">{{fallecidos}}</div>                
                     </div>
                 </div>
             </div>
@@ -52,7 +48,7 @@
 
     <footer>
         <div class="actualizacion">
-            Ult. Actualizacion: Hoy
+            Ult. Actualizacion: {{actualizado}}
         </div>
     </footer>
 </body>
