@@ -1,5 +1,4 @@
 from django.shortcuts import render
-=======
 import requests
 import json
 from datetime import *
@@ -22,18 +21,21 @@ def getData():
 
     respJson = response.json()
     today = respJson[-1]
+
+    update_date = today["Date"]
+    update_date = update_date[0:10]
+
     tenDaysAgo = respJson[0]
     newLast10Days = today["Confirmed"] - tenDaysAgo["Confirmed"] 
     context = {
         'total': today["Confirmed"],
         'recovered': today["Recovered"],
         'deaths': today["Deaths"],
-        'update': today["Date"],
+        'update':update_date,
         'country': today["Country"],
         'new': newLast10Days,
     }
     return context
->>>>>>> 7aa248629d34adb814efb691c1271e7c31db1469
 
 def getCountries():
     url = 'https://api.covid19api.com/countries'
@@ -55,6 +57,6 @@ def getCountries():
 def index(request):
     context = {}
     countries = getCountries()
-    context = getData(context)
+    context = getData()
 
-    return render(request, 'stats/index.html')
+    return render(request, 'stats/index.html', context)

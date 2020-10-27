@@ -2,6 +2,9 @@
     padding:0;
     margin:0;
 }
+body{
+    background-color:rgb(255, 255, 204);
+}
 nav{
     padding:2em;
 }
@@ -13,7 +16,9 @@ nav{
 .stats{
     text-align: center;
     width:50%;
-    height:70vh;
+    border:1px solid gray;
+    border-radius: 10px;
+    height:60vh;
 }
 .country{
     width:100%;
@@ -27,7 +32,7 @@ nav{
 }
 .stats-total{
     width:100%;
-    padding:10% 0;
+    padding:5% 0;
 }
 .casos{
     font-size:2em;
@@ -38,7 +43,7 @@ nav{
 .stats-percentage{
     display: flex;
     justify-content: space-evenly;
-    padding:10% 0;
+    padding:5% 0;
 }
 
 footer{
@@ -47,4 +52,7 @@ footer{
 .actualizacion{
     text-align: right;
     font-size: 1.2em;
+}
+.days10{
+    text-align: center;
 }

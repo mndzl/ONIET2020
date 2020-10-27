@@ -23,7 +23,7 @@
         <div class="stats">
             <div class="country">
                 <div class="country_container">
-                    <h1>{{user.pais}}</h1>
+                    <h1>Argentina</h1>
                 </div>
             </div>
 
@@ -35,20 +35,22 @@
                 <div class="stats-percentage">
                     <div class="recuperados">
                         <div class="casos">Recuperados</div>
-                        <div class="amount">{{recuperados}}</div>                
+                        <div class="amount">{{recovered}}</div>                
                     </div>
                     <div class="fallecidos">
                         <div class="casos">Fallecidos</div>
-                        <div class="amount">{{fallecidos}}</div>                
+                        <div class="amount">{{deaths}}</div>                
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="days10">Ultimos 10 dias: {{new}} casos</div>
+
     <footer>
         <div class="actualizacion">
-            Ult. Actualizacion: {{actualizado}}
+            Ult. Actualizacion: {{ update }}
         </div>
     </footer>
 </body>
