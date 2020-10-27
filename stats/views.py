@@ -7,8 +7,7 @@ from django.contrib.auth.decorators import login_required
 def getData():
     today = date.today()
     dateFrom = today - timedelta(days=10)
-
-    url = "https://api.covid19api.com/country/argentina"
+    url = 'https://api.covid19api.com/country/argentina'
 
     parameters = {
         "from": dateFrom,
@@ -35,6 +34,7 @@ def getData():
         'update':update_date,
         'country': today["Country"],
         'new': newLast10Days,
+        'countries':getCountries(),
     }
     return context
 

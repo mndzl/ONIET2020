@@ -19,11 +19,18 @@
         </nav>
     </div>
 
+    <div class="username" style='display:none' id='username'>{{user.username}}</div>
+
     <div class="body-container">
         <div class="stats">
             <div class="country">
                 <div class="country_container">
-                    <h1>{{user.custom_user.pais}}</h1>
+                    <select name="country" id="country">
+                        <option value="{{user.custom_user.pais}}">{{user.custom_user.pais}}</option>
+                        {% for country in countries %}
+                        <option value="{{country}}"><a href="#">{{country}}</a></option>
+                        {% endfor %}
+                    </select>
                 </div>
             </div>
 
