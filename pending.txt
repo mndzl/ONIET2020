@@ -1,0 +1,10 @@
+- Frontend Users / stats
+
+- API : 
+        - Total Pais
+        - Recuperados
+        - Muertos
+        - Fecha Ultima Actualizacion
+        - Cuantos nuevos casos en los ultimos 10 dias
+        - Activos Actuales
+    
