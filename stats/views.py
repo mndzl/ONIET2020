@@ -1,11 +1,7 @@
 from django.shortcuts import render
 
 def get_data(pais):
-    #
-    #
-    #
-    #
-
+    
 
 def index(request):
     user = #
