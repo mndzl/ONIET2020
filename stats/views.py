@@ -2,6 +2,7 @@ from django.shortcuts import render
 import requests
 import json
 from datetime import *
+from django.contrib.auth.decorators import login_required
 
 def getData():
     today = date.today()
@@ -54,6 +55,7 @@ def getCountries():
     
     return countries
     
+@login_required
 def index(request):
     context = {}
     countries = getCountries()
